@@ -20,9 +20,8 @@ This skill extracts information from a provided source text and injects it into 
 3.  **Extract and Map**: Map the information from the source text to the corresponding placeholders.
 4.  **Inject**: Replace the placeholders in the template with the extracted values.
 5.  **Output Format**: 
-    - **CRITICAL**: The output MUST be a valid JSON object.
-    - **NO FILE WRITING**: Do NOT write the result to any file. Only return the JSON in the chat response.
-    - The JSON should have a `result` field containing the final injected string.
+    - **PLAIN TEXT**: Return only the final string with the injected values.
+    - **NO FILE WRITING**: Do NOT write the result to any file. Only return the text in the chat response.
 
 ## Examples
 
@@ -32,11 +31,7 @@ This skill extracts information from a provided source text and injects it into 
 Template: "Reminder: Meeting at {time} on {day} in {location}."
 
 **Output**:
-```json
-{
-  "result": "Reminder: Meeting at 2 PM on Friday in Room 101."
-}
-```
+Reminder: Meeting at 2 PM on Friday in Room 101.
 
 ### Example 2
 **Input**:
@@ -44,8 +39,4 @@ Template: "Reminder: Meeting at {time} on {day} in {location}."
 Template: "Welcome, {{username}}! We sent a verification link to {{email}}."
 
 **Output**:
-```json
-{
-  "result": "Welcome, john_doe! We sent a verification link to john@example.com."
-}
-```
+Welcome, john_doe! We sent a verification link to john@example.com.

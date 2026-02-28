@@ -18,12 +18,7 @@ Provide a source text and a template, and include the `--提取` keyword. The sk
 
 **Example**:
 - **Prompt**: "--提取 Source: 'Alice is 25 years old.' Template: 'User {name} is {age}.'"
-- **Output**: 
-```json
-{
-  "result": "User Alice is 25."
-}
-```
+- **Output**: User Alice is 25.
 
 ## Project Structure
 - `message-injector/SKILL.md`: The core skill definition.

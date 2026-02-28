@@ -16,25 +16,36 @@ This skill extracts information from a provided source text and injects it into 
 
 ## Instructions
 1.  **Analyze the Source Text**: Identify key entities and information in the source text that correspond to the placeholders in the template.
-2.  **Identify Placeholders**: Locate all placeholders in the template string. Placeholders are typically enclosed in curly braces `{}` or other delimiters (e.g., `{{}}`, `<>`).
-3.  **Extract and Map**: Map the information from the source text to the corresponding placeholders. If a placeholder's value is not explicitly stated but can be inferred, infer it. If a value is missing, leave the placeholder as is or use a reasonable default if context implies one.
+2.  **Identify Placeholders**: Locate all placeholders in the template string.
+3.  **Extract and Map**: Map the information from the source text to the corresponding placeholders.
 4.  **Inject**: Replace the placeholders in the template with the extracted values.
-5.  **Output**: Return the final string with the injected values.
+5.  **Output Format**: 
+    - **CRITICAL**: The output MUST be a valid JSON object.
+    - **NO FILE WRITING**: Do NOT write the result to any file. Only return the JSON in the chat response.
+    - The JSON should have a `result` field containing the final injected string.
 
 ## Examples
 
 ### Example 1
 **Input**:
-Source: "The meeting is at 2 PM on Friday in Room 101."
+--提取 Source: "The meeting is at 2 PM on Friday in Room 101."
 Template: "Reminder: Meeting at {time} on {day} in {location}."
 
 **Output**:
-"Reminder: Meeting at 2 PM on Friday in Room 101."
+```json
+{
+  "result": "Reminder: Meeting at 2 PM on Friday in Room 101."
+}
+```
 
 ### Example 2
 **Input**:
-Source: "User john_doe signed up with email john@example.com."
+--提取 Source: "User john_doe signed up with email john@example.com."
 Template: "Welcome, {{username}}! We sent a verification link to {{email}}."
 
 **Output**:
-"Welcome, john_doe! We sent a verification link to john@example.com."
+```json
+{
+  "result": "Welcome, john_doe! We sent a verification link to john@example.com."
+}
+```

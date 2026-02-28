@@ -4,19 +4,19 @@
     {
       "id": 1,
       "prompt": "--提取 Source: 'Bob is 30 years old.'\nTemplate: 'Name: {name}, Age: {age}'",
-      "expected_output": "Name: Bob, Age: 30",
+      "expected_output": "{\n  \"result\": \"Name: Bob, Age: 30\"\n}",
       "files": []
     },
     {
       "id": 2,
       "prompt": "--提取 Source: 'The conference is in Paris on June 15th.'\nTemplate: 'Event Location: {city}, Date: {date}'",
-      "expected_output": "Event Location: Paris, Date: June 15th",
+      "expected_output": "{\n  \"result\": \"Event Location: Paris, Date: June 15th\"\n}",
       "files": []
     },
     {
       "id": 3,
       "prompt": "--提取 Source: 'Product X costs $50 and is available in blue.'\nTemplate: 'Item: {product}, Price: {price}, Color: {color}'",
-      "expected_output": "Item: Product X, Price: $50, Color: blue",
+      "expected_output": "{\n  \"result\": \"Item: Product X, Price: $50, Color: blue\"\n}",
       "files": []
     }
   ]

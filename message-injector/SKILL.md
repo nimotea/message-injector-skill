@@ -1,16 +1,18 @@
 ---
 name: message-injector
-description: Inject information from a source text into a target template with placeholders. Use this skill when the user provides source information and a template string, and wants to see the completed message.
+description: Inject information from a source text into a target template with placeholders. This skill MUST ONLY be triggered when the user explicitly uses the keyword "--提取".
 ---
 
 # Message Injector
 
 This skill extracts information from a provided source text and injects it into a target template string that contains placeholders.
 
+## Trigger Keyword
+**CRITICAL**: This skill should ONLY be used when the user message contains the exact keyword `--提取`. If this keyword is missing, do NOT use this skill.
+
 ## When to use this skill
-- When the user provides a source text (e.g., "Bob is 30 years old") and a template (e.g., "Hello {name}, age {age}").
-- When the user asks to "fill in the blanks" based on a description.
-- When the user wants to parameterize a message with specific data.
+- When the user provides a source text and a template, AND includes the `--提取` keyword.
+- When the user explicitly asks to "extract" information into a template using the `--提取` command.
 
 ## Instructions
 1.  **Analyze the Source Text**: Identify key entities and information in the source text that correspond to the placeholders in the template.

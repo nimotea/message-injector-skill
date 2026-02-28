@@ -14,11 +14,10 @@ This skill is designed for use within the Trae/Claude ecosystem.
 (Coming soon - will be available as a `.skill` package)
 
 ### Usage
-Provide a source text and a template, and the skill will return the injected result.
+Provide a source text and a template, and include the `--提取` keyword. The skill will only trigger when this keyword is present.
 
 **Example**:
-- **Source**: "Alice is 25 years old."
-- **Template**: "User {name} is {age}."
+- **Prompt**: "--提取 Source: 'Alice is 25 years old.' Template: 'User {name} is {age}.'"
 - **Output**: "User Alice is 25."
 
 ## Project Structure

@@ -3,19 +3,19 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Source: 'Bob is 30 years old.'\nTemplate: 'Name: {name}, Age: {age}'",
+      "prompt": "--提取 Source: 'Bob is 30 years old.'\nTemplate: 'Name: {name}, Age: {age}'",
       "expected_output": "Name: Bob, Age: 30",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "Source: 'The conference is in Paris on June 15th.'\nTemplate: 'Event Location: {city}, Date: {date}'",
+      "prompt": "--提取 Source: 'The conference is in Paris on June 15th.'\nTemplate: 'Event Location: {city}, Date: {date}'",
       "expected_output": "Event Location: Paris, Date: June 15th",
       "files": []
     },
     {
       "id": 3,
-      "prompt": "Source: 'Product X costs $50 and is available in blue.'\nTemplate: 'Item: {product}, Price: {price}, Color: {color}'",
+      "prompt": "--提取 Source: 'Product X costs $50 and is available in blue.'\nTemplate: 'Item: {product}, Price: {price}, Color: {color}'",
       "expected_output": "Item: Product X, Price: $50, Color: blue",
       "files": []
     }

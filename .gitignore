@@ -1,0 +1,35 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Workspace directories for evaluation (skill-creator artifacts)
+*-workspace/
+iteration-*/
+old_skill/
+without_skill/
+with_skill/
+grading.json
+benchmark.json
+benchmark.md
+timing.json
+feedback.json
+eval_metadata.json
+eval_set.json
+eval_review_*.html
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Trae/VS Code
+.trae/
+.vscode/
